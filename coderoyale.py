@@ -224,7 +224,8 @@ while True:
     elif avail_kbars < 2:
         queen_action = "BUILD " + str(closest_site_to_queen().id) + " BARRACKS-ARCHER"
     else:
-        queen_action = "MOVE " + str(my_start_point.x) + " " + str(my_start_point.y)
+        queen_action = "BUILD " + str(closest_unbuilt_site(units[my_queen]).id) + " TOWER"
+        #queen_action = "MOVE " + str(my_start_point.x) + " " + str(my_start_point.y)
         
     train_action = "TRAIN"
     if my_knights <= foe_knights and my_gold > 100:
