@@ -157,7 +157,7 @@ while True:
     avail_abars = 0
     my_mines = 0
     my_revenue = 0
-    target_revenue = 5
+    target_revenue = 6
     
     
     # touched_site: -1 if none
@@ -227,7 +227,7 @@ while True:
         queen_action = "BUILD " + str(closest_unbuilt_site(units[my_queen]).id) + " TOWER"
         #queen_action = "MOVE " + str(my_start_point.x) + " " + str(my_start_point.y)
         
-    train_action = "TRAIN"
+    train_action = "TRAIN" 
     if my_knights <= foe_knights and my_gold > 100:
         train_action += str(closest_archer_to_foe())
         my_gold -= 100 
